@@ -18,7 +18,7 @@
         <nav>
             <ul>
                 <li><a href="#">Home</a></li>
-                <li><a href="#" onclick="showProducts()">Products</a></li>
+                <li><a href="#" id="exploreLink">Products</a></li>
                 <li><a href="#">About Us</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
@@ -28,7 +28,7 @@
         <section class="hero">
             <h2>Welcome to Our Crochet World</h2>
             <p>Discover the beauty of handmade crochet creations.</p>
-            <a href="#" class="cta-button" onclick="showProducts()">Explore Now</a>
+            <a href="#" class="cta-button" id="exploreButton">Explore Now</a>
         </section>
 
         <section class="product-section" id="productSection">
@@ -55,10 +55,10 @@
     </footer>
 
     <script>
-        function showProducts() {
-            var productSection = document.getElementById("productSection");
-            productSection.style.display = "block";
-        }
+        document.getElementById('exploreButton').addEventListener('click', function() {
+            var productSection = document.getElementById('productSection');
+            productSection.style.display = 'block';
+        });
     </script>
 </body>
 </html>
