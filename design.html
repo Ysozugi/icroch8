@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I Crochet for YOU</title>
+    <style>
+        /* Styles as before */
+
+        .product-section {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Icrochet</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#" onclick="showProducts()">Products</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <h2>Welcome to Our Crochet World</h2>
+            <p>Discover the beauty of handmade crochet creations.</p>
+            <a href="#" class="cta-button" onclick="showProducts()">Explore Now</a>
+        </section>
+
+        <section class="product-section" id="productSection">
+            <h2>Featured Products</h2>
+            <div class="product">
+                <img src="product1.jpg" alt="Product 1">
+                <h3>Product 1</h3>
+                <p>Description of Product 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+            <div class="product">
+                <img src="product2.jpg" alt="Product 2">
+                <h3>Product 2</h3>
+                <p>Description of Product 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+        </section>
+
+        <section class="about-us">
+            <h2>About Us</h2>
+            <p>At Icrochet, we are passionate about creating unique and beautiful crochet items. Our team of skilled artisans carefully handcrafts each piece to bring joy and warmth to your life.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 I Crochet for YOU</p>
+    </footer>
+
+    <script>
+        function showProducts() {
+            var productSection = document.getElementById("productSection");
+            productSection.style.display = "block";
+        }
+    </script>
+</body>
+</html>
