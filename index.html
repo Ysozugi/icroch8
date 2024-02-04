@@ -25,6 +25,10 @@
             margin: 0;
             font-size: 24px;
             text-transform: uppercase;
+            background-color: #2ecc71; /* Green background for the logo */
+            display: inline-block;
+            padding: 10px;
+            border-radius: 5px;
         }
 
         nav ul {
@@ -88,6 +92,7 @@
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             padding: 20px;
             margin-bottom: 20px;
+            position: relative;
         }
 
         .product img {
@@ -106,38 +111,130 @@
             color: #555;
         }
 
-        .about-us {
-            margin-top: 40px;
+        .product .price {
+            font-size: 16px;
+            color: #2ecc71;
+            margin-bottom: 10px;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-weight: bold;
         }
 
-        footer {
-            background: #333;
+        .product .buttons {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 15px; /* Added a bit of space here */
+        }
+
+        .checkout-add-to-cart-buttons {
+            background: #2ecc71;
             color: #fff;
-            text-align: center;
-            padding: 10px;
-            position: fixed;
+            border-radius: 5px;
+            padding: 5px 10px;
+            display: flex;
+            align-items: center;
+            position: absolute;
             bottom: 0;
-            width: 100%;
+            right: 20px;
+        }
+
+        .checkout-button, .add-to-cart-button {
+            background: none;
+            color: #fff;
+            padding: 8px 12px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+        }
+
+        .checkout-button:hover, .add-to-cart-button:hover {
+            background: #fff;
+            color: #2ecc71;
+        }
+
+        .checkout-add-to-cart-buttons .divider {
+            margin: 0 5px;
+            color: #fff;
+        }
+
+        .signup-login-buttons {
+            display: flex;
+            margin-top: 10px;
+        }
+
+        .signup-login-buttons button {
+            background: #2ecc71;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+            margin-right: 10px;
+        }
+
+        .signup-login-buttons button:hover {
+            background: #fff;
+            color: #2ecc71;
+        }
+
+        .search-bar {
+            margin-top: 20px;
+            display: flex;
+        }
+
+        .search-bar input {
+            padding: 10px;
+            flex: 1;
+            border: 1px solid #2ecc71;
+            border-radius: 5px 0 0 5px;
+        }
+
+        .search-bar button {
+            background: #2ecc71;
+            color: #fff;
+            border: 1px solid #2ecc71;
+            border-radius: 0 5px 5px 0;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        .search-bar button:hover {
+            background: #fff;
+            color: #2ecc71;
+        }
+
+        .about-us {
+            background: #2ecc71;
+            color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-top: 40px;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Icrochet</h1>
+        <h1>Icroch8</h1>
         <nav>
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Products</a></li>
                 <li><a href="#">About Us</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="contact.html">Contact</a></li> <!-- Updated contact link -->
             </ul>
         </nav>
+        <div class="search-bar">
+            <input type="text" placeholder="Search...">
+            <button type="button">Search</button>
+        </div>
     </header>
     <main>
         <section class="hero">
             <h2>Welcome to Our Crochet World</h2>
             <p>Discover the beauty of handmade crochet creations.</p>
-            <a href="#" class="cta-button">Explore Now</a>
         </section>
 
         <section class="featured">
@@ -145,12 +242,28 @@
             <div class="product">
                 <img src="images/product1.jpg" alt="Product 1">
                 <h3>Product 1</h3>
-                <p>Description of Product 1. Lavander - Tulips boquet.</p>
+                <p>Description of Product 1. Lavender - Tulips bouquet.</p>
+                <span class="price">₱300.00</span>
+                <div class="buttons">
+                    <div class="checkout-add-to-cart-buttons">
+                        <a href="#" class="checkout-button">Checkout</a>
+                        <span class="divider">|</span>
+                        <a href="#" class="add-to-cart-button">Add to Cart</a>
+                    </div>
+                </div>
             </div>
             <div class="product">
                 <img src="images/product2.jpg" alt="Product 2">
                 <h3>Product 2</h3>
-                <p>Description of Product 2. Sunflower boquet.</p>
+                <p>Description of Product 2. Sunflower bouquet.</p>
+                <span class="price">₱150.00</span>
+                <div class="buttons">
+                    <div class="checkout-add-to-cart-buttons">
+                        <a href="#" class="checkout-button">Checkout</a>
+                        <span class="divider">|</span>
+                        <a href="#" class="add-to-cart-button">Add to Cart</a>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -158,9 +271,11 @@
             <h2>About Us</h2>
             <p>At Icrochet, we are passionate about creating unique and beautiful crochet items. Our team of skilled artisans carefully handcrafts each piece to bring joy and warmth to your life.</p>
         </section>
+
+        <div class="signup-login-buttons">
+            <button href="#" class="signup-button">Sign Up</button>
+            <button href="#" class="login-button">Log In</button>
+        </div>
     </main>
-    <footer>
-        <p>&copy; 2024 I Crochet for YOU</p>
-    </footer>
 </body>
 </html>
